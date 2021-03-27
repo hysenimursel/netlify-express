@@ -21,7 +21,7 @@ var adapterFor = (function() {
 }());
 
 // khai bao link url
-var rootURL = "http://veloxify.social/";
+var rootURL = "https://pawsworld.me";
 
 
 function getData(postID){
@@ -65,7 +65,7 @@ router.get('/post/:postID', (req, res) => {
 					res.writeHead(302, {location: rootURL + "?p=" + postID});
 				}else{
 					res.write("<script>window.location.href='" +  rootURL + "/" + slug + "&utm_source=" + utm + "&utm_medium=" + utm + "&utm_campaign=" + utm + "</script>")
-					res.writeHead(302, {location: rootURL + slug + "?utm_source=" + utm + "&utm_medium=" + utm + "&utm_campaign=" + utm + ""});
+					res.writeHead(302, {location: rootURL + "/" + slug + "?utm_source=" + utm + "&utm_medium=" + utm + "&utm_campaign=" + utm + ""});
 				}
 				
 				res.end();
